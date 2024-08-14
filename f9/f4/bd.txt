@@ -1,0 +1,24 @@
+-- Crear la base de datos
+CREATE DATABASE IF NOT EXISTS solicitudes_reemplazo;
+
+-- Seleccionar la base de datos
+USE solicitudes_reemplazo;
+
+-- Crear la tabla mantenimiento
+CREATE TABLE IF NOT EXISTS mantenimiento(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    folio VARCHAR(50) NOT NULL UNIQUE,
+    email VARCHAR(255) NOT NULL,
+    servicio VARCHAR(255) NOT NULL,
+    coditr VARCHAR(50) NOT NULL,
+    linea_telefonica VARCHAR(50) NOT NULL,
+    acuerdo_comercial LONGBLOB NOT NULL,
+    message TEXT NOT NULL,
+    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+
+
+
+

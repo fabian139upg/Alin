@@ -1,0 +1,15 @@
+-- Seleccionar la base de datos
+USE solicitudes_reemplazo;
+
+-- Crear la tabla `asignacion`
+CREATE TABLE IF NOT EXISTS asignacion (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    folio VARCHAR(50) NOT NULL UNIQUE,
+    email VARCHAR(255) NOT NULL,
+    servicio VARCHAR(255) NOT NULL,
+    coditr VARCHAR(50) NOT NULL,
+    cantidad_equipos INT NOT NULL,
+    acuerdo_comercial LONGBLOB NOT NULL,
+    message TEXT NOT NULL,
+    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
